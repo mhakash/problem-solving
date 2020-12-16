@@ -15,15 +15,15 @@ public:
         int p = 0;
 
         for(int i=0; i<l; i++){
-						if(pos[s[i]] < p ) {
-							pos[s[i]] = i;
-							ma = max(ma , i - p + 1);
-						}
-						else {
-							p = pos[s[i]] + 1;
-							pos[s[i]] = i;
-						}
-				}
+		if(pos[s[i]] < p ) {
+			pos[s[i]] = i;
+			ma = max(ma , i - p + 1);
+		}
+		else {
+			p = pos[s[i]] + 1;
+			pos[s[i]] = i;
+		}
+	}
         return ma; 
     }
 };
